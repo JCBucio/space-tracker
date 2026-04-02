@@ -2,7 +2,9 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
+
+app.use(cors());
 
 // Endpoint to get and clean TLEs from Celestrak
 app.get('/api/tles', async (req, res) => {
@@ -28,6 +30,8 @@ app.get('/api/tles', async (req, res) => {
         const activeMannedStations = stations.filter(s =>
             s.name.includes('ISS') || s.name.includes('CSS') || s.name.includes('TIANGONG')
         );
+
+        console.log('Fetched and cleaned TLEs');
 
         res.json(activeMannedStations);
     } catch (error) {
