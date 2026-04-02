@@ -1,0 +1,24 @@
+{
+  "name": "space-tracker-api",
+  "version": "1.0.0",
+  "description": "API that extracts information from different sources such as CelesTrack, The Space Devs API, and more.",
+  "homepage": "https://github.com/JCBucio/space-tracker#readme",
+  "bugs": {
+    "url": "https://github.com/JCBucio/space-tracker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JCBucio/space-tracker.git"
+  },
+  "license": "MIT",
+  "author": "Juan Carlos Bucio Tejeda",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
