@@ -1,0 +1,1160 @@
+{
+  "id": 165,
+  "url": "https://ll.thespacedevs.com/2.3.0/expeditions/165/",
+  "name": "Expedition 74",
+  "start": "2025-12-09T01:41:00Z",
+  "end": null,
+  "response_mode": "detailed",
+  "spacestation": {
+    "id": 4,
+    "url": "https://ll.thespacedevs.com/2.3.0/space_stations/4/",
+    "name": "International Space Station",
+    "image": {
+      "id": 1952,
+      "name": "ISS as seen from Shuttle Atlantis (STS-132)",
+      "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/international2520space2520station_image_20190220215716.jpeg",
+      "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305194230.jpeg",
+      "credit": "NASA",
+      "license": {
+        "id": 4,
+        "name": "NASA Image and Media Guidelines",
+        "priority": 0,
+        "link": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      },
+      "single_use": false,
+      "variants": []
+    },
+    "status": {
+      "id": 1,
+      "name": "Active"
+    },
+    "founded": "1998-11-20",
+    "deorbited": null,
+    "description": "The International Space Station (ISS) is a space station, or a habitable artificial satellite, in low Earth orbit. Its first component was launched into orbit in 1998, with the first long-term residents arriving in November 2000. It has been inhabited continuously since that date. The last pressurised module was fitted in 2011, and an experimental inflatable space habitat was added in 2016. The station is expected to operate until 2030. Development and assembly of the station continues, with several new elements scheduled for launch in 2019. The ISS is the largest human-made body in low Earth orbit and can often be seen with the naked eye from Earth. The ISS consists of pressurised habitation modules, structural trusses, solar arrays, radiators, docking ports, experiment bays and robotic arms. ISS components have been launched by Russian Proton and Soyuz rockets, and American Space Shuttles.",
+    "orbit": "Low Earth Orbit",
+    "type": {
+      "id": 2,
+      "name": "Government"
+    },
+    "owners": [
+      {
+        "response_mode": "normal",
+        "id": 16,
+        "url": "https://ll.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        },
+        "featured": false,
+        "country": [
+          {
+            "id": 26,
+            "name": "Canada",
+            "alpha_2_code": "CA",
+            "alpha_3_code": "CAN",
+            "nationality_name": "Canadian",
+            "nationality_name_composed": "Canado"
+          }
+        ],
+        "description": "The Canadian Space Agency was established by the Canadian Space Agency Act which received Royal Assent on May 10, 1990. \r\n\r\nThe Canadian space program is administered by the Canadian Space Agency. Canada has contributed technology, expertise and personnel to the world space effort, especially in collaboration with ESA and NASA. In addition to its astronauts and satellites, some of the most notable Canadian technological contributions to space exploration include the Canadarm on the Space Shuttle and Canadarm2 on the International Space Station.",
+        "administrator": "President: Lisa Campbell",
+        "founding_year": 1990,
+        "launchers": "",
+        "spacecraft": "",
+        "parent": null,
+        "image": null,
+        "logo": {
+          "id": 120,
+          "name": "Canadian Space Agency logo",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/canadian_space__image_20260402074720.png",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/canadian_space__image_thumbnail_20260402074720.png",
+          "credit": "Canadian Space Agency",
+          "license": {
+            "id": 42,
+            "name": "CSA Copyright",
+            "priority": 2,
+            "link": "https://www.asc-csa.gc.ca/eng/terms.asp#copyright"
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "social_logo": {
+          "id": 47,
+          "name": "Canadian Space Agency social logo",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/canadian_space__image_20260402074642.jpg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/canadian_space__image_thumbnail_20260402074642.jpeg",
+          "credit": "Canadian Space Agency",
+          "license": {
+            "id": 42,
+            "name": "CSA Copyright",
+            "priority": 2,
+            "link": "https://www.asc-csa.gc.ca/eng/terms.asp#copyright"
+          },
+          "single_use": true,
+          "variants": []
+        }
+      },
+      {
+        "response_mode": "normal",
+        "id": 27,
+        "url": "https://ll.thespacedevs.com/2.3.0/agencies/27/",
+        "name": "European Space Agency",
+        "abbrev": "ESA",
+        "type": {
+          "id": 2,
+          "name": "Multinational"
+        },
+        "featured": false,
+        "country": [
+          {
+            "id": 1,
+            "name": "France",
+            "alpha_2_code": "FR",
+            "alpha_3_code": "FRA",
+            "nationality_name": "French",
+            "nationality_name_composed": "Franco"
+          },
+          {
+            "id": 3,
+            "name": "Italy",
+            "alpha_2_code": "IT",
+            "alpha_3_code": "ITA",
+            "nationality_name": "Italian",
+            "nationality_name_composed": "Italo"
+          },
+          {
+            "id": 4,
+            "name": "Germany",
+            "alpha_2_code": "DE",
+            "alpha_3_code": "DEU",
+            "nationality_name": "German",
+            "nationality_name_composed": "Germano"
+          },
+          {
+            "id": 7,
+            "name": "Spain",
+            "alpha_2_code": "ES",
+            "alpha_3_code": "ESP",
+            "nationality_name": "Spanish",
+            "nationality_name_composed": "Hispano"
+          },
+          {
+            "id": 8,
+            "name": "Switzerland",
+            "alpha_2_code": "CH",
+            "alpha_3_code": "CHE",
+            "nationality_name": "Swiss",
+            "nationality_name_composed": "Swiss"
+          },
+          {
+            "id": 10,
+            "name": "United Kingdom",
+            "alpha_2_code": "GB",
+            "alpha_3_code": "GBR",
+            "nationality_name": "British",
+            "nationality_name_composed": "Brito"
+          },
+          {
+            "id": 11,
+            "name": "Austria",
+            "alpha_2_code": "AT",
+            "alpha_3_code": "AUT",
+            "nationality_name": "Austrian",
+            "nationality_name_composed": "Austro"
+          },
+          {
+            "id": 15,
+            "name": "Sweden",
+            "alpha_2_code": "SE",
+            "alpha_3_code": "SWE",
+            "nationality_name": "Swedish",
+            "nationality_name_composed": "Swedo"
+          },
+          {
+            "id": 23,
+            "name": "Portugal",
+            "alpha_2_code": "PT",
+            "alpha_3_code": "PRT",
+            "nationality_name": "Portuguese",
+            "nationality_name_composed": "Luso"
+          },
+          {
+            "id": 27,
+            "name": "Netherlands",
+            "alpha_2_code": "NL",
+            "alpha_3_code": "NLD",
+            "nationality_name": "Dutch",
+            "nationality_name_composed": "Dutch"
+          },
+          {
+            "id": 31,
+            "name": "Hungary",
+            "alpha_2_code": "HU",
+            "alpha_3_code": "HUN",
+            "nationality_name": "Hungarian",
+            "nationality_name_composed": "Hungarian"
+          },
+          {
+            "id": 39,
+            "name": "Poland",
+            "alpha_2_code": "PL",
+            "alpha_3_code": "POL",
+            "nationality_name": "Polish",
+            "nationality_name_composed": "Polono"
+          },
+          {
+            "id": 45,
+            "name": "Denmark",
+            "alpha_2_code": "DK",
+            "alpha_3_code": "DNK",
+            "nationality_name": "Danish",
+            "nationality_name_composed": "Dano"
+          },
+          {
+            "id": 46,
+            "name": "Czechia",
+            "alpha_2_code": "CZ",
+            "alpha_3_code": "CZE",
+            "nationality_name": "Czech",
+            "nationality_name_composed": "Czech"
+          },
+          {
+            "id": 47,
+            "name": "Romania",
+            "alpha_2_code": "RO",
+            "alpha_3_code": "ROU",
+            "nationality_name": "Romanian",
+            "nationality_name_composed": "Romanian"
+          },
+          {
+            "id": 49,
+            "name": "Norway",
+            "alpha_2_code": "NO",
+            "alpha_3_code": "NOR",
+            "nationality_name": "Norwegian",
+            "nationality_name_composed": "Norwegian"
+          },
+          {
+            "id": 77,
+            "name": "Finland",
+            "alpha_2_code": "FI",
+            "alpha_3_code": "FIN",
+            "nationality_name": "Finnish",
+            "nationality_name_composed": "Finno"
+          },
+          {
+            "id": 78,
+            "name": "Greece",
+            "alpha_2_code": "GR",
+            "alpha_3_code": "GRC",
+            "nationality_name": "Greek",
+            "nationality_name_composed": "Greco"
+          },
+          {
+            "id": 80,
+            "name": "Estonia",
+            "alpha_2_code": "EE",
+            "alpha_3_code": "EST",
+            "nationality_name": "Estonian",
+            "nationality_name_composed": "Estonian"
+          },
+          {
+            "id": 81,
+            "name": "Ireland",
+            "alpha_2_code": "IE",
+            "alpha_3_code": "IRL",
+            "nationality_name": "Irish",
+            "nationality_name_composed": "Irish"
+          },
+          {
+            "id": 85,
+            "name": "Luxembourg",
+            "alpha_2_code": "LU",
+            "alpha_3_code": "LUX",
+            "nationality_name": "Luxembourger",
+            "nationality_name_composed": "Luxembourgish"
+          },
+          {
+            "id": 20,
+            "name": "Belgium",
+            "alpha_2_code": "BE",
+            "alpha_3_code": "BEL",
+            "nationality_name": "Belgian",
+            "nationality_name_composed": "Belgo"
+          },
+          {
+            "id": 86,
+            "name": "Slovenia",
+            "alpha_2_code": "SI",
+            "alpha_3_code": "SVN",
+            "nationality_name": "Slovenian",
+            "nationality_name_composed": "Slovenian"
+          }
+        ],
+        "description": "The European Space Agency is an intergovernmental organisation of 22 member states. Established in 1975 and headquartered in Paris, France, ESA has a worldwide staff of about 2,000 employees.\r\n\r\nESA's space flight programme includes human spaceflight (mainly through participation in the International Space Station program); the launch and operation of unmanned exploration missions to other planets and the Moon; Earth observation, science and telecommunication; designing launch vehicles; and maintaining a major spaceport, the Guiana Space Centre at Kourou, French Guiana.",
+        "administrator": "Director General: Josef Aschbacher",
+        "founding_year": 1975,
+        "launchers": "Ariane | Vega",
+        "spacecraft": "Space Rider",
+        "parent": null,
+        "image": {
+          "id": 2324,
+          "name": "ESA patch floating in the ISS Cupola",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/esa_patch_float_image_20250211192109.png",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/esa_patch_float_image_thumbnail_20250211192110.png",
+          "credit": "ESA",
+          "license": {
+            "id": 2,
+            "name": "ESA Standard Licence",
+            "priority": 2,
+            "link": "https://www.esa.int/ESA_Multimedia/Terms_and_conditions_of_use_of_images_and_videos_available_on_the_esa_website"
+          },
+          "single_use": false,
+          "variants": []
+        },
+        "logo": {
+          "id": 130,
+          "name": "European Space Agency logo",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/european2520space2520agency_logo_20221130101442.png",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305184947.png",
+          "credit": "ESA",
+          "license": {
+            "id": 2,
+            "name": "ESA Standard Licence",
+            "priority": 2,
+            "link": "https://www.esa.int/ESA_Multimedia/Terms_and_conditions_of_use_of_images_and_videos_available_on_the_esa_website"
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "social_logo": {
+          "id": 130,
+          "name": "European Space Agency logo",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/european2520space2520agency_logo_20221130101442.png",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305184947.png",
+          "credit": "ESA",
+          "license": {
+            "id": 2,
+            "name": "ESA Standard Licence",
+            "priority": 2,
+            "link": "https://www.esa.int/ESA_Multimedia/Terms_and_conditions_of_use_of_images_and_videos_available_on_the_esa_website"
+          },
+          "single_use": true,
+          "variants": []
+        }
+      },
+      {
+        "response_mode": "normal",
+        "id": 37,
+        "url": "https://ll.thespacedevs.com/2.3.0/agencies/37/",
+        "name": "Japan Aerospace Exploration Agency",
+        "abbrev": "JAXA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        },
+        "featured": true,
+        "country": [
+          {
+            "id": 28,
+            "name": "Japan",
+            "alpha_2_code": "JP",
+            "alpha_3_code": "JPN",
+            "nationality_name": "Japanese",
+            "nationality_name_composed": "Nippo"
+          }
+        ],
+        "description": "The Japan Aerospace Exploration Agency (JAXA) is Japan's national aero-space agency. Through the merger of three previously independent organizations, JAXA was formed on 1 October 2003. JAXA is responsible for research, technology development and the launch of satellites into orbit, and is involved in many more advanced missions, such as asteroid exploration and possible manned exploration of the Moon. JAXA launch their Epsilon vehicle from the Uchinoura Space Center and their H-II vehicles from the Tanegashima Space Center.",
+        "administrator": "Administrator: Hiroshi Yamakawa",
+        "founding_year": 2003,
+        "launchers": "H-II",
+        "spacecraft": "",
+        "parent": null,
+        "image": {
+          "id": 16,
+          "name": "[AUTO] Japan Aerospace Exploration Agency - image",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/japan2520aerospace2520exploration2520agency_image_20190207032440.jpeg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305184621.jpeg",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "logo": {
+          "id": 151,
+          "name": "[AUTO] Japan Aerospace Exploration Agency - logo",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/japan2520aerospace2520exploration2520agency_logo_20190207032440.png",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305185023.png",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "social_logo": {
+          "id": 69,
+          "name": "[AUTO] Japan Aerospace Exploration Agency - social_logo",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/japan2520aerospace2520exploration2520agency_nation_20230531052930.png",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305184813.png",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        }
+      },
+      {
+        "response_mode": "normal",
+        "id": 44,
+        "url": "https://ll.thespacedevs.com/2.3.0/agencies/44/",
+        "name": "National Aeronautics and Space Administration",
+        "abbrev": "NASA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        },
+        "featured": true,
+        "country": [
+          {
+            "id": 2,
+            "name": "United States of America",
+            "alpha_2_code": "US",
+            "alpha_3_code": "USA",
+            "nationality_name": "American",
+            "nationality_name_composed": "Americano"
+          }
+        ],
+        "description": "The National Aeronautics and Space Administration is an independent agency of the executive branch of the United States federal government responsible for the civilian space program, as well as aeronautics and aerospace research. NASA have many launch facilities but most are inactive. The most commonly used pad will be LC-39B at Kennedy Space Center in Florida.",
+        "administrator": "Administrator: Jared Isaacman",
+        "founding_year": 1958,
+        "launchers": "Space Shuttle | SLS",
+        "spacecraft": "Orion",
+        "parent": null,
+        "image": {
+          "id": 19,
+          "name": "[AUTO] National Aeronautics and Space Administration - image",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/national2520aeronautics2520and2520space2520administration_image_20190207032448.jpeg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305184631.jpeg",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "logo": {
+          "id": 161,
+          "name": "[AUTO] National Aeronautics and Space Administration - logo",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/national2520aeronautics2520and2520space2520administration_logo_20190207032448.png",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305185043.png",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "social_logo": {
+          "id": 76,
+          "name": "[AUTO] National Aeronautics and Space Administration - social_logo",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/national2520aeronautics2520and2520space2520administration_nation_20230803040809.jpg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305184823.jpeg",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        }
+      },
+      {
+        "response_mode": "normal",
+        "id": 63,
+        "url": "https://ll.thespacedevs.com/2.3.0/agencies/63/",
+        "name": "Russian Federal Space Agency (ROSCOSMOS)",
+        "abbrev": "RFSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        },
+        "featured": true,
+        "country": [
+          {
+            "id": 5,
+            "name": "Russia",
+            "alpha_2_code": "RU",
+            "alpha_3_code": "RUS",
+            "nationality_name": "Russian",
+            "nationality_name_composed": "Russo"
+          }
+        ],
+        "description": "The Roscosmos State Corporation for Space Activities, commonly known as Roscosmos, is the governmental body responsible for the space science program of the Russian Federation and general aerospace research. Soyuz has many launch locations the Russian sites are Baikonur, Plesetsk and Vostochny however Ariane also purchases the vehicle and launches it from French Guiana.",
+        "administrator": "Administrator: Yuri Borisov",
+        "founding_year": 1992,
+        "launchers": "Soyuz",
+        "spacecraft": "Soyuz",
+        "parent": null,
+        "image": {
+          "id": 25,
+          "name": "[AUTO] Russian Federal Space Agency (ROSCOSMOS) - image",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/russian2520federal2520space2520agency25202528roscosmos2529_image_20190207032459.jpeg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305184652.jpeg",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "logo": {
+          "id": 177,
+          "name": "[AUTO] Russian Federal Space Agency (ROSCOSMOS) - logo",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/russian2520federal2520space2520agency25202528roscosmos2529_logo_20190207032459.png",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305185118.png",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "social_logo": {
+          "id": 89,
+          "name": "[AUTO] Russian Federal Space Agency (ROSCOSMOS) - social_logo",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/russian2520federal2520space2520agency25202528roscosmos2529_nation_20230531052758.jpg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305184841.jpeg",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        }
+      }
+    ]
+  },
+  "mission_patches": [
+    {
+      "id": 1235,
+      "name": "Expedition 74 Patch",
+      "priority": 10,
+      "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/mission_patch_images/expedition2520_mission_patch_20251127145305.png",
+      "agency": {
+        "response_mode": "list",
+        "id": 44,
+        "url": "https://ll.thespacedevs.com/2.3.0/agencies/44/",
+        "name": "National Aeronautics and Space Administration",
+        "abbrev": "NASA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "response_mode": "normal"
+    }
+  ],
+  "spacewalks": [],
+  "crew": [
+    {
+      "id": 5205,
+      "role": {
+        "id": 1,
+        "role": "Commander",
+        "priority": 0
+      },
+      "astronaut": {
+        "id": 647,
+        "url": "https://ll.thespacedevs.com/2.3.0/astronauts/647/",
+        "name": "Sergey Kud-Sverchkov",
+        "status": {
+          "id": 1,
+          "name": "Active"
+        },
+        "agency": {
+          "response_mode": "list",
+          "id": 63,
+          "url": "https://ll.thespacedevs.com/2.3.0/agencies/63/",
+          "name": "Russian Federal Space Agency (ROSCOSMOS)",
+          "abbrev": "RFSA",
+          "type": {
+            "id": 1,
+            "name": "Government"
+          }
+        },
+        "image": {
+          "id": 937,
+          "name": "[AUTO] Sergey Kud-Sverchkov - image",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/sergey_kud-sver_image_20200603145217.jpg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305191157.jpeg",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "response_mode": "list",
+        "type": {
+          "id": 2,
+          "name": "Government"
+        },
+        "in_space": true,
+        "time_in_space": "P316DT15H25M58S",
+        "eva_time": "PT6H47M",
+        "age": 42,
+        "date_of_birth": "1983-08-23",
+        "date_of_death": null,
+        "nationality": [
+          {
+            "id": 5,
+            "name": "Russia",
+            "alpha_2_code": "RU",
+            "alpha_3_code": "RUS",
+            "nationality_name": "Russian",
+            "nationality_name_composed": "Russo"
+          }
+        ],
+        "bio": "Sergey Vladimirvich Kud-Sverchkov Is a Kazakh-Russian engineer and cosmonaut selected in 2010.",
+        "wiki": "https://en.wikipedia.org/wiki/Sergey_Kud-Sverchkov",
+        "last_flight": "2025-11-27T09:27:57Z",
+        "first_flight": "2020-10-14T05:45:04Z",
+        "social_media_links": [
+          {
+            "id": 91,
+            "social_media": {
+              "id": 1,
+              "name": "X",
+              "url": "https://x.com",
+              "logo": {
+                "id": 2320,
+                "name": "X logo",
+                "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/x_logo_image_20250211191027.jpg",
+                "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/x_logo_image_thumbnail_20250211191027.jpeg",
+                "credit": "X",
+                "license": {
+                  "id": 1,
+                  "name": "Unknown",
+                  "priority": 9,
+                  "link": null
+                },
+                "single_use": true,
+                "variants": []
+              }
+            },
+            "url": "https://twitter.com/KudSverchkov"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5181,
+      "role": {
+        "id": 3,
+        "role": "Flight Engineer",
+        "priority": 2
+      },
+      "astronaut": {
+        "id": 714,
+        "url": "https://ll.thespacedevs.com/2.3.0/astronauts/714/",
+        "name": "Christopher Williams",
+        "status": {
+          "id": 1,
+          "name": "Active"
+        },
+        "agency": {
+          "response_mode": "list",
+          "id": 44,
+          "url": "https://ll.thespacedevs.com/2.3.0/agencies/44/",
+          "name": "National Aeronautics and Space Administration",
+          "abbrev": "NASA",
+          "type": {
+            "id": 1,
+            "name": "Government"
+          }
+        },
+        "image": {
+          "id": 671,
+          "name": "Christopher Williams official portrait",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/christopher_wil_image_20211206185420.jpg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305190450.jpeg",
+          "credit": "NASA",
+          "license": {
+            "id": 4,
+            "name": "NASA Image and Media Guidelines",
+            "priority": 0,
+            "link": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+          },
+          "single_use": false,
+          "variants": []
+        },
+        "response_mode": "list",
+        "type": {
+          "id": 2,
+          "name": "Government"
+        },
+        "in_space": true,
+        "time_in_space": "P131DT16H16M40S",
+        "eva_time": "P0D",
+        "age": 43,
+        "date_of_birth": "1983-01-01",
+        "date_of_death": null,
+        "nationality": [
+          {
+            "id": 2,
+            "name": "United States of America",
+            "alpha_2_code": "US",
+            "alpha_3_code": "USA",
+            "nationality_name": "American",
+            "nationality_name_composed": "Americano"
+          }
+        ],
+        "bio": "Christopher Williams grw up in Potomac, Maryland and graduated from Stanford University in 2005 with a bachelor’s degree in physics and a doctorate in physics from MIT in 2012, where his research was in astrophysics. Williams is a board-certified medical physicist, completing his residency training at Harvard Medical School before joining the faculty as a clinical physicist and researcher. He most recently worked as a medical physicist in the Radiation Oncology Department at the Brigham and Women's Hospital and Dana-Farber Cancer Institute in Boston. He was the lead physicist for the Institute’s MRI-guided adaptive radiation therapy program. His research focused on developing image guidance techniques for cancer treatments.\r\n\r\nExact date of birth unknown.",
+        "wiki": "https://en.wikipedia.org/wiki/Christopher_Williams_(astronaut)",
+        "last_flight": "2025-11-27T09:27:57Z",
+        "first_flight": "2025-11-27T09:27:57Z",
+        "social_media_links": []
+      }
+    },
+    {
+      "id": 5242,
+      "role": {
+        "id": 3,
+        "role": "Flight Engineer",
+        "priority": 2
+      },
+      "astronaut": {
+        "id": 712,
+        "url": "https://ll.thespacedevs.com/2.3.0/astronauts/712/",
+        "name": "Jack Hathaway",
+        "status": {
+          "id": 1,
+          "name": "Active"
+        },
+        "agency": {
+          "response_mode": "list",
+          "id": 44,
+          "url": "https://ll.thespacedevs.com/2.3.0/agencies/44/",
+          "name": "National Aeronautics and Space Administration",
+          "abbrev": "NASA",
+          "type": {
+            "id": 1,
+            "name": "Government"
+          }
+        },
+        "image": {
+          "id": 621,
+          "name": "[AUTO] Jack Hathaway - image",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/jack_hathaway_image_20211206185407.jpg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305190331.jpeg",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "response_mode": "list",
+        "type": {
+          "id": 2,
+          "name": "Government"
+        },
+        "in_space": true,
+        "time_in_space": "P53DT15H28M41S",
+        "eva_time": "P0D",
+        "age": 44,
+        "date_of_birth": "1982-01-01",
+        "date_of_death": null,
+        "nationality": [
+          {
+            "id": 2,
+            "name": "United States of America",
+            "alpha_2_code": "US",
+            "alpha_3_code": "USA",
+            "nationality_name": "American",
+            "nationality_name_composed": "Americano"
+          }
+        ],
+        "bio": "Jack Hathaway is a US Navy commander from Connecticut. He earned bachelors’ degrees in physics and history from the U.S. Naval Academy and completed graduate studies at Cranfield University in England and the U.S. Naval War College. A distinguished naval aviator, Hathaway flew and deployed with Navy’s Strike Fighter Squadron 14 aboard the USS Nimitz and Strike Fighter Squadron 136 aboard the USS Truman. He graduated from Empire Test Pilots’ School, supported the Joint Chiefs of Staff at the Pentagon, and was most recently assigned as the prospective executive officer for Strike Fighter Squadron 81. He has more than 2,500 flight hours in 30 types of aircraft, more than 500 carrier arrested landings, and flew 39 combat missions.\r\n\r\nExact date of birth unknown.",
+        "wiki": "https://en.wikipedia.org/wiki/Jack_Hathaway",
+        "last_flight": "2026-02-13T10:15:56Z",
+        "first_flight": "2026-02-13T10:15:56Z",
+        "social_media_links": []
+      }
+    },
+    {
+      "id": 5180,
+      "role": {
+        "id": 3,
+        "role": "Flight Engineer",
+        "priority": 2
+      },
+      "astronaut": {
+        "id": 839,
+        "url": "https://ll.thespacedevs.com/2.3.0/astronauts/839/",
+        "name": "Sergey Mikayev",
+        "status": {
+          "id": 1,
+          "name": "Active"
+        },
+        "agency": {
+          "response_mode": "list",
+          "id": 63,
+          "url": "https://ll.thespacedevs.com/2.3.0/agencies/63/",
+          "name": "Russian Federal Space Agency (ROSCOSMOS)",
+          "abbrev": "RFSA",
+          "type": {
+            "id": 1,
+            "name": "Government"
+          }
+        },
+        "image": null,
+        "response_mode": "list",
+        "type": {
+          "id": 2,
+          "name": "Government"
+        },
+        "in_space": true,
+        "time_in_space": "P131DT16H17M42S",
+        "eva_time": "P0D",
+        "age": 41,
+        "date_of_birth": "1985-03-15",
+        "date_of_death": null,
+        "nationality": [
+          {
+            "id": 5,
+            "name": "Russia",
+            "alpha_2_code": "RU",
+            "alpha_3_code": "RUS",
+            "nationality_name": "Russian",
+            "nationality_name_composed": "Russo"
+          }
+        ],
+        "bio": "Sergey Mikayev is a Russian cosmonaut affiliated with Roscosmos",
+        "wiki": "https://en.wikipedia.org/wiki/Sergey_Mikayev",
+        "last_flight": "2025-11-27T09:27:57Z",
+        "first_flight": "2025-11-27T09:27:57Z",
+        "social_media_links": []
+      }
+    },
+    {
+      "id": 5243,
+      "role": {
+        "id": 3,
+        "role": "Flight Engineer",
+        "priority": 2
+      },
+      "astronaut": {
+        "id": 747,
+        "url": "https://ll.thespacedevs.com/2.3.0/astronauts/747/",
+        "name": "Sophie Adenot",
+        "status": {
+          "id": 1,
+          "name": "Active"
+        },
+        "agency": {
+          "response_mode": "list",
+          "id": 27,
+          "url": "https://ll.thespacedevs.com/2.3.0/agencies/27/",
+          "name": "European Space Agency",
+          "abbrev": "ESA",
+          "type": {
+            "id": 2,
+            "name": "Multinational"
+          }
+        },
+        "image": {
+          "id": 262,
+          "name": "[AUTO] Sophie Adenot - image",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/sophie_adenot_image_20221123150954.jpg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305185354.jpeg",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "response_mode": "list",
+        "type": {
+          "id": 2,
+          "name": "Government"
+        },
+        "in_space": true,
+        "time_in_space": "P53DT15H28M56S",
+        "eva_time": "P0D",
+        "age": 43,
+        "date_of_birth": "1982-07-05",
+        "date_of_death": null,
+        "nationality": [
+          {
+            "id": 1,
+            "name": "France",
+            "alpha_2_code": "FR",
+            "alpha_3_code": "FRA",
+            "nationality_name": "French",
+            "nationality_name_composed": "Franco"
+          }
+        ],
+        "bio": "Between 2001 and 2003, Sophie studied engineering and graduated from ISAE-SUPAERO in Toulouse, France, where she specialised in spacecraft and aircraft flight dynamics. She then completed a Master of Science in human factors engineering at MIT – Massachusetts Institute of Technology in Boston, USA, in 2004.\r\nIn 2005, Sophie joined the French Air Force for her basic military training and initial flying training to become a helicopter pilot.  \r\n\r\nIn 2018, she graduated with honours as a helicopter test pilot from the Empire Test Pilots’ School in Boscombe Down, UK. She was awarded the Mac Kenna trophy and the Patuxtent Shield.\r\nBetween 2019 and 2022, Sophie worked as a helicopter experimental test pilot in Cazaux Flight Test Center with DGA (Direction Générale de l’Armement – the French Defence Procurement Agency). She has logged 3000 hours and flew on 22 different helicopter types. She also holds a military parachute license, a light aircraft pilot license and a glider pilot license.",
+        "wiki": "https://en.wikipedia.org/wiki/Sophie_Adenot",
+        "last_flight": "2026-02-13T10:15:56Z",
+        "first_flight": "2026-02-13T10:15:56Z",
+        "social_media_links": [
+          {
+            "id": 24,
+            "social_media": {
+              "id": 1,
+              "name": "X",
+              "url": "https://x.com",
+              "logo": {
+                "id": 2320,
+                "name": "X logo",
+                "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/x_logo_image_20250211191027.jpg",
+                "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/x_logo_image_thumbnail_20250211191027.jpeg",
+                "credit": "X",
+                "license": {
+                  "id": 1,
+                  "name": "Unknown",
+                  "priority": 9,
+                  "link": null
+                },
+                "single_use": true,
+                "variants": []
+              }
+            },
+            "url": "https://twitter.com/Soph_astro"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5244,
+      "role": {
+        "id": 3,
+        "role": "Flight Engineer",
+        "priority": 2
+      },
+      "astronaut": {
+        "id": 732,
+        "url": "https://ll.thespacedevs.com/2.3.0/astronauts/732/",
+        "name": "Andrei Fedyaev",
+        "status": {
+          "id": 1,
+          "name": "Active"
+        },
+        "agency": {
+          "response_mode": "list",
+          "id": 63,
+          "url": "https://ll.thespacedevs.com/2.3.0/agencies/63/",
+          "name": "Russian Federal Space Agency (ROSCOSMOS)",
+          "abbrev": "RFSA",
+          "type": {
+            "id": 1,
+            "name": "Government"
+          }
+        },
+        "image": {
+          "id": 646,
+          "name": "[AUTO] Andrei Fedyaev - image",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/andrei_fedyaev_image_20230207203113.jpg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305190412.jpeg",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "response_mode": "list",
+        "type": {
+          "id": 2,
+          "name": "Government"
+        },
+        "in_space": true,
+        "time_in_space": "P239DT14H11M59S",
+        "eva_time": "P0D",
+        "age": 45,
+        "date_of_birth": "1981-02-26",
+        "date_of_death": null,
+        "nationality": [
+          {
+            "id": 5,
+            "name": "Russia",
+            "alpha_2_code": "RU",
+            "alpha_3_code": "RUS",
+            "nationality_name": "Russian",
+            "nationality_name_composed": "Russo"
+          }
+        ],
+        "bio": "Andrei Valerievich Fedyaev (Андрей Валерьевич Федяев) is a Russian cosmonaut. He was a military pilot prior to retiring from Air Force in 2013, and was selected as a cosmonaut in 2012. \r\n\r\nISS-69 expedition will be Fedyaev's first spaceflight.",
+        "wiki": "https://en.wikipedia.org/wiki/Andrey_Fedyaev",
+        "last_flight": "2026-02-13T10:15:56Z",
+        "first_flight": "2023-03-02T05:34:14Z",
+        "social_media_links": []
+      }
+    },
+    {
+      "id": 5241,
+      "role": {
+        "id": 3,
+        "role": "Flight Engineer",
+        "priority": 2
+      },
+      "astronaut": {
+        "id": 573,
+        "url": "https://ll.thespacedevs.com/2.3.0/astronauts/573/",
+        "name": "Jessica Meir",
+        "status": {
+          "id": 1,
+          "name": "Active"
+        },
+        "agency": {
+          "response_mode": "list",
+          "id": 44,
+          "url": "https://ll.thespacedevs.com/2.3.0/agencies/44/",
+          "name": "National Aeronautics and Space Administration",
+          "abbrev": "NASA",
+          "type": {
+            "id": 1,
+            "name": "Government"
+          }
+        },
+        "image": {
+          "id": 842,
+          "name": "[AUTO] Jessica Meir - image",
+          "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/jessica_meir_image_20200417064900.jpeg",
+          "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305190924.jpeg",
+          "credit": null,
+          "license": {
+            "id": 1,
+            "name": "Unknown",
+            "priority": 9,
+            "link": null
+          },
+          "single_use": true,
+          "variants": []
+        },
+        "response_mode": "list",
+        "type": {
+          "id": 2,
+          "name": "Government"
+        },
+        "in_space": true,
+        "time_in_space": "P258DT6H46M30S",
+        "eva_time": "PT21H44M",
+        "age": 48,
+        "date_of_birth": "1977-07-01",
+        "date_of_death": null,
+        "nationality": [
+          {
+            "id": 2,
+            "name": "United States of America",
+            "alpha_2_code": "US",
+            "alpha_3_code": "USA",
+            "nationality_name": "American",
+            "nationality_name_composed": "Americano"
+          }
+        ],
+        "bio": "Jessica Ulrika Meir is Assistant Professor of Anesthesia at Harvard Medical School, Massachusetts General Hospital, Boston, following postdoctoral research in comparative physiology at the University of British Columbia. She has studied the diving physiology and behavior of emperor penguins in Antarctica, and the physiology of bar-headed geese, which are able to migrate over the Himalayas. In 2000, Meir graduated with a Master of Space Studies from the International Space University in Strasbourg, France. In September 2002, Meir served as an aquanaut on the NASA Extreme Environment Mission Operations 4 (NEEMO 4) crew. In June 2013 she was named an astronaut candidate by NASA, becoming one of the eight members of NASA Astronaut Group 21. She is from Caribou, Maine.",
+        "wiki": "https://en.wikipedia.org/wiki/Jessica_Meir",
+        "last_flight": "2026-02-13T10:15:56Z",
+        "first_flight": "2019-09-25T13:57:42Z",
+        "social_media_links": [
+          {
+            "id": 25,
+            "social_media": {
+              "id": 1,
+              "name": "X",
+              "url": "https://x.com",
+              "logo": {
+                "id": 2320,
+                "name": "X logo",
+                "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/x_logo_image_20250211191027.jpg",
+                "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/x_logo_image_thumbnail_20250211191027.jpeg",
+                "credit": "X",
+                "license": {
+                  "id": 1,
+                  "name": "Unknown",
+                  "priority": 9,
+                  "link": null
+                },
+                "single_use": true,
+                "variants": []
+              }
+            },
+            "url": "https://twitter.com/Astro_Jessica"
+          },
+          {
+            "id": 26,
+            "social_media": {
+              "id": 2,
+              "name": "Instagram",
+              "url": "https://instagram.com",
+              "logo": {
+                "id": 2322,
+                "name": "Instagram logo",
+                "image_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/instagram_logo_image_20250211191139.png",
+                "thumbnail_url": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/instagram_logo_image_thumbnail_20250211191139.png",
+                "credit": "Instagram",
+                "license": {
+                  "id": 1,
+                  "name": "Unknown",
+                  "priority": 9,
+                  "link": null
+                },
+                "single_use": true,
+                "variants": []
+              }
+            },
+            "url": "https://www.instagram.com/astro_jessica/"
+          }
+        ]
+      }
+    }
+  ]
+}
