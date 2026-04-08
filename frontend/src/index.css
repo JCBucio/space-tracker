@@ -22,6 +22,162 @@ html, body, #root {
   position: relative;
 }
 
+.tracker-layout {
+  position: relative;
+}
+
+.station-sidebar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 320px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  z-index: 20;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(7, 11, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.station-sidebar.collapsed {
+  width: 52px;
+  padding: 10px;
+}
+
+.sidebar-toggle {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.sidebar-title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.station-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.station-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.station-item.active {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.station-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.station-info-panel {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 10px;
+}
+
+.station-info-panel details {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+}
+
+.station-info-panel summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.station-logo {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.crew-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.crew-member {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.crew-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.crew-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  font-size: 0.85rem;
+}
+
+.crew-name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.crew-role {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.crew-agency {
+  color: rgba(255, 200, 124, 0.8);
+  margin: 0;
+  font-size: 0.8rem;
+}
+
 /* Clase para el panel de información flotante (Lo usaremos más adelante) */
 .info-panel {
   position: absolute;
