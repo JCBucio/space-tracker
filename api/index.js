@@ -189,5 +189,5 @@ app.get('/api/expedition/:id', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`space-tracker API running on http://localhost:${PORT}`);
+    console.log(`SpaceTracker API running`);
 });
