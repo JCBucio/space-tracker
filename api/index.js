@@ -74,7 +74,6 @@ app.get('/api/tles', async (req, res) => {
         tleCache.timestamp = Date.now();
 
         console.log('Fetched and cleaned TLEs (cached for next 24 hours)');
-        console.log(activeMannedStations);
 
         res.json(activeMannedStations);
     } catch (error) {
@@ -106,7 +105,7 @@ app.get('/api/iss-info', async (req, res) => {
         const issInfo = data['results'][0];
 
         setCachedEntry(apiCache.issInfo, issInfo);
-        console.log('Fetched ISS crew data and cached for 2 hours:', issInfo);
+        console.log('Fetched ISS crew data and cached for 2 hours.');
 
         res.json(issInfo);
     } catch (error) {
@@ -137,7 +136,7 @@ app.get('/api/css-info', async (req, res) => {
         const cssInfo = data['results'][0];
 
         setCachedEntry(apiCache.cssInfo, cssInfo);
-        console.log('Fetched CSS crew data and cached for 2 hours:', cssInfo);
+        console.log('Fetched CSS crew data and cached for 2 hours.');
 
         res.json(cssInfo);
     } catch (error) {
@@ -171,7 +170,7 @@ app.get('/api/expedition/:id', async (req, res) => {
         apiCache.expeditions[expeditionId] = apiCache.expeditions[expeditionId] || { data: null, timestamp: null };
         setCachedEntry(apiCache.expeditions[expeditionId], data);
 
-        console.log(`Fetched expedition data for ID ${expeditionId} and cached for 2 hours:`, data);
+        console.log(`Fetched expedition data for ID ${expeditionId} and cached for 2 hours.`);
 
         res.json(data);
     } catch (error) {
