@@ -1,25 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Globe from 'react-globe.gl';
 import * as satellite from 'satellite.js';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-const GlobeTracker = () => {
+const getStationColor = (name = '') => {
+    if (name.includes('ISS')) return '#00E5FF';
+    if (name.includes('CSS') || name.includes('TIANHE')) return '#FF4D6D';
+    return '#FFFFFF';
+};
+
+const GlobeTracker = ({ selectedStationName = '', onStationsUpdate, onStationSelect }) => {
     const globeRef = useRef();
+    const lastFocusedSelectionRef = useRef('');
     const [stations, setStations] = useState([]);
     const [trajectories, setTrajectories] = useState([]);
     const [modelsReady, setModelsReady] = useState(false);
-    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
-    const [selectedStationName, setSelectedStationName] = useState('');
-    const [stationInfoCache, setStationInfoCache] = useState({
-        iss: null,
-        css: null,
-    });
-    const [stationInfoLoading, setStationInfoLoading] = useState(false);
-    const [stationInfoError, setStationInfoError] = useState('');
-    const [expeditionData, setExpeditionData] = useState(null);
-    const [expeditionLoading, setExpeditionLoading] = useState(false);
-    const expeditionCacheRef = useRef({});
     const lastTrajectoryUpdateRef = useRef(0);
     const modelTemplatesRef = useRef({
         iss: null,
@@ -79,18 +75,6 @@ const GlobeTracker = () => {
         return instance;
     };
 
-    const getStationColor = (name = '') => {
-        if (name.includes('ISS')) return '#00E5FF';
-        if (name.includes('CSS') || name.includes('TIANHE')) return '#FF4D6D';
-        return '#FFFFFF';
-    };
-
-    const getStationTypeByName = (name = '') => {
-        if (name.includes('ISS')) return 'iss';
-        if (name.includes('CSS') || name.includes('TIANHE')) return 'css';
-        return null;
-    };
-
     const focusStation = (station) => {
         if (!globeRef.current || !station) return;
 
@@ -102,64 +86,6 @@ const GlobeTracker = () => {
             },
             1200
         );
-    };
-
-    const loadStationInfo = async (stationName) => {
-        const stationType = getStationTypeByName(stationName);
-        if (!stationType) return;
-
-        if (stationInfoCache[stationType]) return;
-
-        const endpoint = stationType === 'iss'
-            ? 'http://localhost:3001/api/iss-info'
-            : 'http://localhost:3001/api/css-info';
-
-        try {
-            setStationInfoError('');
-            setStationInfoLoading(true);
-
-            const response = await fetch(endpoint);
-            const data = await response.json();
-
-            setStationInfoCache(prev => ({
-                ...prev,
-                [stationType]: data,
-            }));
-        } catch (error) {
-            console.error('Error loading station info:', error);
-            setStationInfoError('Could not load station information.');
-        } finally {
-            setStationInfoLoading(false);
-        }
-    };
-
-    const loadExpeditionData = async (expeditionId) => {
-        if (!expeditionId) return;
-
-        if (expeditionCacheRef.current[expeditionId]) {
-            setExpeditionData(expeditionCacheRef.current[expeditionId]);
-            return;
-        }
-
-        try {
-            setExpeditionLoading(true);
-            const response = await fetch(`http://localhost:3001/api/expedition/${expeditionId}`);
-            const data = await response.json();
-
-            expeditionCacheRef.current[expeditionId] = data;
-            setExpeditionData(data);
-        } catch (error) {
-            console.error('Error loading expedition data:', error);
-            setExpeditionData(null);
-        } finally {
-            setExpeditionLoading(false);
-        }
-    };
-
-    const handleSelectStation = (station) => {
-        setSelectedStationName(station.name);
-        focusStation(station);
-        loadStationInfo(station.name);
     };
 
     const buildNextOrbitTrajectory = (station, startDate = new Date()) => {
@@ -196,6 +122,23 @@ const GlobeTracker = () => {
             points,
         };
     };
+
+    useEffect(() => {
+        if (typeof onStationsUpdate === 'function') {
+            onStationsUpdate(stations);
+        }
+    }, [stations, onStationsUpdate]);
+
+    useEffect(() => {
+        if (!selectedStationName || stations.length === 0) return;
+        if (lastFocusedSelectionRef.current === selectedStationName) return;
+
+        const selectedStation = stations.find((station) => station.name === selectedStationName);
+        if (selectedStation) {
+            focusStation(selectedStation);
+            lastFocusedSelectionRef.current = selectedStationName;
+        }
+    }, [selectedStationName, stations]);
 
     // Fetch data from the API
     useEffect(() => {
@@ -265,132 +208,8 @@ const GlobeTracker = () => {
         return () => clearInterval(intervalId);
     }, []);
 
-    const selectedStation = stations.find(s => s.name === selectedStationName) || null;
-    const selectedStationType = getStationTypeByName(selectedStationName);
-    const selectedStationInfo = selectedStationType ? stationInfoCache[selectedStationType] : null;
-    const stationOwners = selectedStationInfo?.owners?.map(owner => owner.abbrev || owner.name) || [];
-    const activeExpeditionId = selectedStationInfo?.active_expeditions?.[0]?.id;
-    const activeExpeditionName = selectedStationInfo?.active_expeditions?.[0]?.name;
-    const stationLogo = selectedStationInfo?.image?.thumbnail_url;
-
-    // Fetch expedition data when expedition ID changes
-    useEffect(() => {
-        if (activeExpeditionId) {
-            loadExpeditionData(activeExpeditionId);
-        }
-    }, [activeExpeditionId]);
-
     return (
-        <div className="tracker-layout" style={{ width: '100vw', height: '100vh', backgroundColor: '#000' }}>
-            <aside className={`station-sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
-                <button
-                    className="sidebar-toggle"
-                    type="button"
-                    onClick={() => setIsSidebarCollapsed(prev => !prev)}
-                >
-                    {isSidebarCollapsed ? '»' : '«'}
-                </button>
-
-                {!isSidebarCollapsed && (
-                    <>
-                        <h2 className="sidebar-title">Stations</h2>
-
-                        <div className="station-list">
-                            {stations.map(station => (
-                                <button
-                                    key={station.name}
-                                    type="button"
-                                    className={`station-item ${selectedStationName === station.name ? 'active' : ''}`}
-                                    onClick={() => handleSelectStation(station)}
-                                >
-                                    <span
-                                        className="station-color-dot"
-                                        style={{ backgroundColor: getStationColor(station.name) }}
-                                    />
-                                    {station.name}
-                                </button>
-                            ))}
-                        </div>
-
-                        {selectedStation && (
-                            <div className="station-info-panel">
-                                <details open>
-                                    <summary>Live position</summary>
-                                    <div className="dropdown-content">
-                                        <p>Lat: {selectedStation.lat.toFixed(2)}°</p>
-                                        <p>Lng: {selectedStation.lng.toFixed(2)}°</p>
-                                        <p>Alt: {(selectedStation.alt * 6371 / 1.5).toFixed(0)} km</p>
-                                    </div>
-                                </details>
-
-                                <details open>
-                                    <summary>Station details</summary>
-                                    <div className="dropdown-content">
-                                        {stationLogo && (
-                                            <img
-                                                src={stationLogo}
-                                                alt={selectedStationInfo?.name}
-                                                className="station-logo"
-                                            />
-                                        )}
-
-                                        {stationInfoLoading && <p>Loading...</p>}
-                                        {stationInfoError && <p>{stationInfoError}</p>}
-
-                                        {!stationInfoLoading && !stationInfoError && selectedStationInfo && (
-                                            <>
-                                                <p><strong>Name:</strong> {selectedStationInfo.name}</p>
-                                                <p><strong>Status:</strong> {selectedStationInfo.status?.name || 'Unknown'}</p>
-                                                <p><strong>Orbit:</strong> {selectedStationInfo.orbit || 'Unknown'}</p>
-                                                <p><strong>Founded:</strong> {selectedStationInfo.founded || 'Unknown'}</p>
-                                                <p><strong>Crew:</strong> {selectedStationInfo.onboard_crew ?? 'N/A'}</p>
-                                                <p><strong>Docked vehicles:</strong> {selectedStationInfo.docked_vehicles ?? 'N/A'}</p>
-                                                {activeExpeditionName && <p><strong>Active expedition:</strong> {activeExpeditionName}</p>}
-                                                {stationOwners.length > 0 && (
-                                                    <p><strong>Owners:</strong> {stationOwners.join(', ')}</p>
-                                                )}
-                                            </>
-                                        )}
-                                    </div>
-                                </details>
-
-                                {activeExpeditionId && (
-                                    <details open>
-                                        <summary>Crew</summary>
-                                        <div className="dropdown-content">
-                                            {expeditionLoading && <p>Loading crew...</p>}
-
-                                            {!expeditionLoading && expeditionData?.crew && expeditionData.crew.length > 0 && (
-                                                <div className="crew-list">
-                                                    {expeditionData.crew.map((crewMember) => (
-                                                        <div key={crewMember.id} className="crew-member">
-                                                            {crewMember.astronaut.image?.thumbnail_url && (
-                                                                <img
-                                                                    src={crewMember.astronaut.image.thumbnail_url}
-                                                                    alt={crewMember.astronaut.name}
-                                                                    className="crew-photo"
-                                                                />
-                                                            )}
-                                                            <div className="crew-info">
-                                                                <p className="crew-name">{crewMember.astronaut.name}</p>
-                                                                <p className="crew-role">{crewMember.role?.role || 'N/A'}</p>
-                                                                <p className="crew-agency">
-                                                                    {crewMember.astronaut.agency?.abbrev || crewMember.astronaut.agency?.name || 'N/A'}
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </div>
-                                    </details>
-                                )}
-                            </div>
-                        )}
-                    </>
-                )}
-            </aside>
-
+        <div className="tracker-layout globe-layout" style={{ width: '100vw', height: '100vh', backgroundColor: '#000' }}>
             <Globe 
                 ref={globeRef} 
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
@@ -413,7 +232,11 @@ const GlobeTracker = () => {
                     return getOrCreateStationModel(obj.name);
                 }}
                 onObjectClick={(obj) => {
-                    handleSelectStation(obj);
+                    focusStation(obj);
+
+                    if (typeof onStationSelect === 'function') {
+                        onStationSelect(obj.name);
+                    }
                 }}
             />
         </div>
