@@ -146,7 +146,7 @@ const GlobeTracker = ({ selectedStationName = '', onStationsUpdate, onStationSel
 
         const fetchStations = async () => {
             try {
-                const res = await fetch('http://localhost:3001/api/tles');
+                const res = await fetch('https://space-tracker-8pjk.onrender.com/api/tles');
                 const tlesData = await res.json();
 
                 // Maths of satellite position calculation

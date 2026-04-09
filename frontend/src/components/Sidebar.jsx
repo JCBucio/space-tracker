@@ -87,8 +87,8 @@ const Sidebar = ({ stations = [], selectedStationName = '', onStationSelect }) =
       if (!selectedStationType || stationInfoCache[selectedStationType]) return;
 
       const endpoint = selectedStationType === 'iss'
-        ? 'http://localhost:3001/api/iss-info'
-        : 'http://localhost:3001/api/css-info';
+        ? 'https://space-tracker-8pjk.onrender.com/api/iss-info'
+        : 'https://space-tracker-8pjk.onrender.com/api/css-info';
 
       try {
         setStationInfoError('');
@@ -123,7 +123,7 @@ const Sidebar = ({ stations = [], selectedStationName = '', onStationSelect }) =
 
       try {
         setExpeditionLoading(true);
-        const response = await fetch(`http://localhost:3001/api/expedition/${expeditionId}`);
+        const response = await fetch(`https://space-tracker-8pjk.onrender.com/api/expedition/${expeditionId}`);
         const data = await response.json();
 
         expeditionCacheRef.current[expeditionId] = data;
