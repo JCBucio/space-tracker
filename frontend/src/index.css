@@ -30,87 +30,248 @@ html, body, #root {
   position: absolute;
   top: 16px;
   left: 16px;
-  width: 320px;
+  width: 340px;
   max-height: calc(100vh - 32px);
   overflow-y: auto;
   z-index: 20;
-  padding: 14px;
-  border-radius: 12px;
-  background: rgba(7, 11, 20, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
+  padding: 12px;
+  border-radius: 18px;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.7);
 }
 
 .station-sidebar.collapsed {
-  width: 52px;
-  padding: 10px;
+  width: 88px;
+  padding: 12px 10px;
 }
 
-.sidebar-toggle {
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 14px;
+  margin-bottom: 4px;
   cursor: pointer;
-  padding: 8px;
-  margin-bottom: 10px;
+}
+
+.station-sidebar.collapsed .sidebar-header {
+  justify-content: center;
+  padding: 6px 4px 12px;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-brand-logo {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #3572ff, #2a56d2);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(42, 86, 210, 0.35);
+}
+
+.sidebar-brand-mark {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.sidebar-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.station-sidebar.collapsed .sidebar-brand-text {
+  display: none;
 }
 
 .sidebar-title {
-  font-size: 1rem;
-  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #f3f5fb;
 }
 
-.station-list {
+.sidebar-subtitle {
+  margin: 0;
+  color: rgba(225, 229, 245, 0.55);
+  font-size: 0.8rem;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-section {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 10px;
 }
 
-.station-item {
+.section-header {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
-  text-align: left;
+  gap: 10px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  color: rgba(225, 229, 245, 0.82);
   cursor: pointer;
+  text-align: left;
+  transition: background 0.18s ease, color 0.18s ease;
 }
 
-.station-item.active {
-  border-color: rgba(255, 255, 255, 0.45);
-  background: rgba(255, 255, 255, 0.15);
+.section-header:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f4f7ff;
 }
 
-.station-color-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.section-icon {
   flex-shrink: 0;
 }
 
-.station-info-panel {
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  padding-top: 10px;
+.section-label {
+  flex: 1;
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
-.station-info-panel details {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
-  margin-bottom: 8px;
-  padding: 8px 10px;
+.section-chevron {
+  opacity: 0.75;
 }
 
-.station-info-panel summary {
+.section-chevron.rotated {
+  transform: rotate(90deg);
+}
+
+.station-sidebar.collapsed .section-header {
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.station-sidebar.collapsed .section-label,
+.station-sidebar.collapsed .section-chevron {
+  display: none;
+}
+
+.station-sidebar.collapsed .station-list {
+  display: none;
+}
+
+.section-title {
+  margin: 10px 8px 2px;
+  color: rgba(225, 229, 245, 0.76);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(232, 236, 247, 0.78);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.station-sidebar.collapsed .nav-item {
+  justify-content: center;
+  padding: 10px 8px;
+}
+
+.station-sidebar.collapsed .nav-label {
+  display: none;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f4f7ff;
+}
+
+.nav-item.active {
+  background: #5a87ff;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(90, 135, 255, 0.35);
+}
+
+.nav-icon {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  width: 20px;
+  text-align: center;
+}
+
+.station-sidebar.collapsed .nav-icon {
+  width: auto;
+}
+
+.nav-label {
+  flex: 1;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.station-sidebar.collapsed .station-color-dot {
+  display: none;
+}
+
+.station-color-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.tracker-card {
+  padding: 10px;
+  border-radius: 14px;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tracker-card-empty {
+  color: rgba(232, 236, 247, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.tracker-card details {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 9px 10px;
+}
+
+.tracker-card details:last-child {
+  margin-bottom: 0;
+}
+
+.tracker-card summary {
   cursor: pointer;
   font-weight: 600;
+  color: #f2f5fb;
 }
 
 .dropdown-content {
@@ -118,8 +279,8 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.86rem;
+  color: rgba(231, 237, 255, 0.9);
 }
 
 .station-logo {
@@ -142,7 +303,8 @@ html, body, #root {
   gap: 10px;
   padding: 8px;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
+  border: 1px solid rgba(108, 130, 199, 0.3);
+  border-radius: 8px;
 }
 
 .crew-photo {
@@ -151,6 +313,21 @@ html, body, #root {
   border-radius: 4px;
   object-fit: cover;
   flex-shrink: 0;
+}
+
+.crew-photo-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e8efff;
+  background: linear-gradient(160deg, rgba(95, 131, 255, 0.35), rgba(37, 59, 128, 0.55));
+  border: 1px solid rgba(133, 163, 255, 0.35);
 }
 
 .crew-info {
@@ -173,9 +350,70 @@ html, body, #root {
 }
 
 .crew-agency {
-  color: rgba(255, 200, 124, 0.8);
+  color: #7fc3ff;
   margin: 0;
   font-size: 0.8rem;
+}
+
+.sidebar-about-card {
+  margin-top: 6px;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.sidebar-about-card h3 {
+  margin: 2px 0 6px;
+  font-size: 0.95rem;
+  color: #f1f4fb;
+}
+
+.sidebar-about-card p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: rgba(232, 236, 247, 0.72);
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(90, 135, 255, 0.12);
+  border: 1px solid rgba(90, 135, 255, 0.28);
+  color: #dbe6ff;
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.about-link:hover {
+  transform: translateY(-1px);
+  background: rgba(90, 135, 255, 0.22);
+  border-color: rgba(90, 135, 255, 0.5);
+  box-shadow: 0 10px 20px rgba(90, 135, 255, 0.18);
+}
+
+.about-link:focus-visible {
+  outline: 2px solid rgba(130, 210, 255, 0.9);
+  outline-offset: 2px;
+}
+
+.station-sidebar.collapsed .tracker-card,
+.station-sidebar.collapsed .sidebar-about-card {
+  display: none;
 }
 
 /* Clase para el panel de información flotante (Lo usaremos más adelante) */
